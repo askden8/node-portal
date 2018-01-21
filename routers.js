@@ -1,5 +1,3 @@
-const express = require('express');
-const app = module.exports = express();
 const User = require('./model/user');
 const News = require('./model/news');
 const permission = require('./model/permission');
@@ -77,15 +75,15 @@ module.exports = function (app) {
 
     app.post('/api/newNews', function (req, res) {
         console.log("new api", req.body)
-        if (!!!req.body.text || !!!req.body.theme) {
-            return res.status(400).json({err: 'Data format is not correct'});
-        }
+        // if (!!!req.body.text || !!!req.body.theme) {
+        //     return res.status(400).json({err: 'Data format is not correct'});
+        // }
         try {
             //   const News = mongoose.model('News');
             let New = new News({
-                text: req.body.text,
-                theme: req.body.theme,
-                date: req.body.date,
+                text: "cdd",
+                theme: "dscd",
+                date: "ddd",
                 userId: "22",
                 user: {
                     access_token: "11", firstName: "11", id: "111", image: "111", middleName: "1111", permissionId: "",
